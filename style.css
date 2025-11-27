@@ -1,0 +1,245 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: sans-serif;
+}
+
+.first {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+                  url('https://wallpapers.com/images/hd/netflix-background-gs7hjuwvv2g0e9fj.jpg');
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+  padding: 50px 0 80px 0;
+}
+
+.fourth {
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+  font-size: 80px;
+  text-align: center;
+  letter-spacing: 3px;
+  transition: all 0.5s ease;
+}
+
+.fourth:hover {
+  transform: scale(1.15);
+  text-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
+}
+
+.fifth {
+  width: 80%;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.fifth p {
+  margin-bottom: 15px;
+}
+
+.second {
+  width: 80%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.second img {
+  width: 10%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  transition: width 0.6s ease, transform 0.4s ease, filter 0.5s ease;
+  will-change: width, transform;
+  cursor: pointer;
+  filter: brightness(0.75);
+}
+
+.second img:hover {
+  width: 25%;
+  transform: scale(1.03);
+  filter: brightness(1);
+}
+
+.second:hover img:not(:hover) {
+  filter: brightness(0.6);
+  transform: scale(0.98);
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .first {
+    gap: 30px;
+    padding: 30px 0;
+  }
+
+  .fourth {
+    font-size: 55px;
+  }
+
+  .second {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    justify-content: flex-start;
+    height: 250px;
+    width: 95%;
+  }
+
+  .second img {
+    flex: 0 0 auto;
+    width: 150px;
+    height: 100%;
+    scroll-snap-align: center;
+    border-radius: 10px;
+  }
+
+  .second img:hover {
+    width: 150px;
+    transform: scale(1.05);
+    filter: brightness(1);
+  }
+
+  .second::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .fourth {
+    font-size: 40px;
+  }
+
+  .second {
+    height: 200px;
+    gap: 8px;
+  }
+
+  .second img {
+    width: 120px;
+    border-radius: 8px;
+  }
+
+  .fifth {
+    width: 90%;
+    font-size: 16px;
+  }
+}
+
+.description {
+  position: relative;
+  z-index: 10;
+  color: #f5f5f5;
+  font-size: 18px;
+  text-align: center;
+  margin-top: -10px;
+  background: rgba(15, 15, 15, 0.85);
+  padding: 40px 20px;
+  border-top: 2px solid rgba(255, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.description p {
+  margin-bottom: 15px;
+  color: #ddd;
+  line-height: 1.0;
+}
+
+.seven {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  margin-top: 50px;
+}
+
+.seven ul {
+  list-style: none;
+  padding: 0;
+}
+
+.seven ul li {
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.seven ul li a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.seven ul li:hover a {
+  color: #ff0000;
+  transform: scale(1.08);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .description {
+    font-size: 16px;
+    padding: 30px 15px;
+  }
+
+  .seven {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .seven ul {
+    text-align: center;
+  }
+}
+
+.eight {
+  margin-top: 20px;
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #111;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.4);
+  padding: 20px 0;
+}
+
+.eight img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.eight img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.hey {
+  margin-top: 10px;
+  color: white;
+  text-align: center;
+}
